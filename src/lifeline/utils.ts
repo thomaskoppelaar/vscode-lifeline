@@ -7,9 +7,6 @@ export class utils {
     const workspaceConfig = workspace.getConfiguration('lifeline');
 
     return {
-      swap: workspaceConfig.get('swap') as boolean,
-      clockFormat: workspaceConfig.get('clock.format') as string,
-      clockInterval: workspaceConfig.get('clock.interval') as number,
       batteryInterval: workspaceConfig.get('battery.interval') as number
     };
   }

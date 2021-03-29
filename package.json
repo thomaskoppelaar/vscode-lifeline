@@ -1,12 +1,12 @@
 {
-	"name": "vscode-lifeline",
-	"displayName": "Lifeline: Clock & battery",
-	"description": "Display a clock and current battery state in the status bar.",
+	"name": "vscode-lfln",
+	"displayName": "Lfln: battery status indicator",
+	"description": "Display current battery state in the status bar.",
 	"version": "1.2.0",
-	"author": "Kyle Huggins (http://huggins.io/)",
+	"author": "Thomas Koppelaar",
 	"license": "MIT",
-	"homepage": "https://github.com/kjhx/vscode-lifeline#readme",
-	"publisher": "kjhx",
+	"homepage": "https://github.com/thomaskoppelaar/vscode-lifeline#readme",
+	"publisher": "thomaskoppelaar",
 	"icon": "media/icon.jpg",
 	"galleryBanner": {
 		"color": "#25292E",
@@ -14,10 +14,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kjhx/vscode-lifeline"
+		"url": "https://github.com/thomaskoppelaar/vscode-lifeline"
 	},
 	"bugs": {
-		"url": "https://github.com/kjhx/vscode-lifeline/issues"
+		"url": "https://github.com/thomaskoppelaar/vscode-lifeline/issues"
 	},
 	"engines": {
 		"vscode": "^1.32.0"
@@ -33,25 +33,9 @@
 		"configuration": {
 			"title": "Lifeline",
 			"properties": {
-				"lifeline.swap": {
-					"type": "boolean",
-					"default": false,
-					"description": "Swap the display order of the battery and clock. Ignored if device has no battery."
-				},
-				"lifeline.clock.format": {
-					"type": "string",
-					"default": "h:mm:ss A",
-					"description": "Set the display format for the clock."
-				},
-				"lifeline.clock.interval": {
-					"type": "number",
-					"default": 1000,
-					"minimum": 1000,
-					"description": "Set the polling interval for the clock in ms."
-				},
 				"lifeline.battery.interval": {
 					"type": "number",
-					"default": 3000,
+					"default": 120000,
 					"minimum": 1000,
 					"description": "Set the polling interval for the battery in ms. Ignored if device has no battery."
 				}
@@ -66,7 +50,6 @@
 		"cd:publish": "vsce publish --yarn --githubBranch main"
 	},
 	"dependencies": {
-		"moment": "^2.29.1",
 		"systeminformation": "^4.30.11"
 	},
 	"devDependencies": {

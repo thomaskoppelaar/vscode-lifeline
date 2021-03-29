@@ -39,7 +39,7 @@ export class Battery {
   }
 
   private createBattery(): StatusBarItem {
-    return window.createStatusBarItem(StatusBarAlignment.Right, this.config.swap ? Position.RIGHT : Position.LEFT);
+    return window.createStatusBarItem(StatusBarAlignment.Right, Position.RIGHT);
   }
 
   private updateBattery(): void {
