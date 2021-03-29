@@ -17,4 +17,4 @@ A Visual Studio Code extensions that shows ~~a clock and~~ the current battery s
 ## Configuration
 
 ### `lifeline.battery.interval`
-Set the polling interval for the battery in ms. Ignored if device has no battery. By default, set to 3000ms.
+Set the polling interval for the battery in ms. Ignored if device has no battery. By default, set to 120000ms.
